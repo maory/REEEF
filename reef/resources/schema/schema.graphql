@@ -5,7 +5,7 @@ type Query {
 }
 
 type Mutation {
-    createCustomerOrder(customerOrder: OrderInput!) :Int!
+    createCustomerOrder(customerOrder: Order!) :Int!
 }
 
 type Storefront {
