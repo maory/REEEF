@@ -19,7 +19,7 @@ type Storefront {
 }
 
 type Menu {
-    id: ID!
+    storefrontId: ID!
     items: [MenuItem]
 }
 type MenuItem {
@@ -35,7 +35,7 @@ type Customer {
 
 type Order {
     id: ID!
-    orderingCustomer: Customer!
+    customer: Customer!
     coupons: [Coupon!]
     storefront: Storefront!
 }
@@ -49,7 +49,7 @@ input OrderInput {
 type Coupon{
     id: ID! 
     type: CoupounType!
-    value: Float! 
+    value: Int! 
 }
 
 enum CoupounType {

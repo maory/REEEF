@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "storefront_id": 1,
+        "coupon_ids" : [1,2],
+        "customer_id" : 1
+    },
+    {
+        "id": 2,
+        "storefront_id": 1,
+        "coupon_ids" : [],
+        "customer_id" : 2
+    },
+    {
+        "id": 3,
+        "storefront_id": 2,
+        "coupon_ids" : [3],
+        "customer_id" : 3
+    },
+    {
+        "id": 4,
+        "storefront_id": 3,
+        "coupon_ids" : [],
+        "customer_id" : 2
+    }
+]

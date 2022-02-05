@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "type" : "FLAT_SUM",
+        "value": "150"
+    },
+    {
+        "id": 2,
+        "type" : "FLAT_SUM",
+        "value": "150"
+    },
+    {
+        "id": 3,
+        "type" : "PERCENTAGE_BASED",
+        "value": "20"
+    }
+]

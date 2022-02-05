@@ -1,6 +1,24 @@
 [
     {
         "id" : 1,
-        "name"
+        "name": "store 1",
+        "zipCode" : 12345,
+        "address": "This is the address",
+        "imageUrl": "http://image.com"
+    },
+    {
+        "id" : 2,
+        "name": "store 2",
+        "zipCode" : 12344,
+        "address": "This is the 3",
+        "imageUrl": "http://image.com"
+    },
+    {
+        "id" : 3,
+        "name": "store 3",
+        "zipCode" : 12346,
+        "address": "This is the 5",
+        "imageUrl": "http://image.com"
     }
+
 ]

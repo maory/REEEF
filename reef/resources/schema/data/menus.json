@@ -1,0 +1,28 @@
+[
+    {
+       "storefrontId" : 1,
+       "items" : [
+           {
+               "item": "Pizza",
+               "priceInCents": 400
+           },
+           {
+            "item": "Gamburger",
+            "priceInCents": 2200
+            }
+       ]
+    },
+    {
+        "storefrontId" : 2,
+        "items" : [
+            {
+                "item": "Burger2",
+                "priceInCents": 8899
+            },
+            {
+             "item": "Gamburger",
+             "priceInCents": 2344
+             }
+        ]
+     }
+]
