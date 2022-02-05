@@ -22,14 +22,14 @@ export class StoreFrontResolver {
         return this.storefrontService.getAllStorefrontsInMyArea(zipcode);
     }
 
-    @Resolver('Storefront')
+    //@Resolver('menu')
     @ResolveField()
     menu(@Parent() storefront) : Menu {
         const { id } = storefront; // must be a cleaner way doing that.
         return this.menuService.getStorefrontMenu(id);
     }
 
-    @Resolver('Storefront')
+   // @Resolver('orders')
     @ResolveField()
     orders(@Parent() storefront) {
         const { id } = storefront; // must be a cleaner way doing that.

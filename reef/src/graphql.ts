@@ -27,7 +27,7 @@ export abstract class IQuery {
 }
 
 export abstract class IMutation {
-    abstract createCustomerOrder(customerOrder: Order): number | Promise<number>;
+    abstract createCustomerOrder(customerOrder: OrderInput): number | Promise<number>;
 }
 
 export class Storefront {
