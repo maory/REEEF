@@ -11,8 +11,5 @@ export class OrderResolver {
         return this.storefrontService.getAllStoreFronts();
     }
 
-    @Query()
-    getAllStorefrontsInMyArea(@Args('zipCode') zipcode: number): Storefront[] {
-        return this.getAllStorefrontsInMyArea(zipcode);
-    }
+   
 }

@@ -27,7 +27,7 @@ export abstract class IQuery {
 }
 
 export abstract class IMutation {
-    abstract createCustomerOrder(customerOrder: OrderInput): number | Promise<number>;
+    abstract createCustomerOrder(customerOrder: Order): number | Promise<number>;
 }
 
 export class Storefront {
@@ -41,7 +41,7 @@ export class Storefront {
 }
 
 export class Menu {
-    id: string;
+    storefrontId: string;
     items?: MenuItem[];
 }
 
@@ -58,7 +58,7 @@ export class Customer {
 
 export class Order {
     id: string;
-    orderingCustomer: Customer;
+    customer: Customer;
     coupons?: Coupon[];
     storefront: Storefront;
 }

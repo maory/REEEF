@@ -4,8 +4,9 @@ import { join } from 'path';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { StorefrontService } from 'src/service/storefront/storefront.service';
 import { StoreFrontResolver } from 'src/resolver/storefront.resolver';
-import { OrderService } from 'src/service/order/order/order.service';
 import { MenuService } from 'src/service/menu/menu.service';
+import { OrderService } from 'src/service/order/order.service';
+import { DBService } from 'src/db/db.service';
 
 
 @Module({
@@ -19,6 +20,6 @@ import { MenuService } from 'src/service/menu/menu.service';
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
     }),
   ],
-  providers : [StorefrontService, StoreFrontResolver, OrderService, MenuService]
+  providers : [DBService, StorefrontService, StoreFrontResolver, OrderService, MenuService]
 })
 export class AppModule {}

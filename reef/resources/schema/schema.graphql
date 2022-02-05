@@ -41,7 +41,7 @@ type Order {
 }
 
 input OrderInput {
-    orderingCustomer: Int!
+    customerId: Int!
     couponIds: [Int!]
     storeFrontId: Int
 }

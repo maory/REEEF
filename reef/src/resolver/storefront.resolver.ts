@@ -19,7 +19,7 @@ export class StoreFrontResolver {
 
     @Query()
     getAllStorefrontsInMyArea(@Args('zipCode') zipcode: number): Storefront[] {
-        return this.getAllStorefrontsInMyArea(zipcode);
+        return this.storefrontService.getAllStorefrontsInMyArea(zipcode);
     }
 
     @Resolver('Storefront')
@@ -31,7 +31,7 @@ export class StoreFrontResolver {
 
     @Resolver('Storefront')
     @ResolveField()
-    orders(@Parent() storefront) : Order[] {
+    orders(@Parent() storefront)  {
         const { id } = storefront; // must be a cleaner way doing that.
         return this.orderService.getAllStorefrontOrders(id);
     }
