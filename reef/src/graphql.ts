@@ -12,20 +12,27 @@ export enum CoupounType {
     PERCENTAGE_BASED = "PERCENTAGE_BASED"
 }
 
+export class OrderInput {
+    orderingCustomer: number;
+    couponIds?: number[];
+    storeFrontId?: number;
+}
+
 export abstract class IQuery {
-    abstract getAllStoreFronts(): StoreFront[] | Promise<StoreFront[]>;
+    abstract getAllStorefronts(): Storefront[] | Promise<Storefront[]>;
 
-    abstract getAllStoreFrontsInMyArea(zipCode?: number): StoreFront[] | Promise<StoreFront[]>;
+    abstract getAllStorefrontsInMyArea(zipCode?: number): Storefront[] | Promise<Storefront[]>;
 
-    abstract getStoreFrontMenu(storeFrontId: string): Menu | Promise<Menu>;
+    abstract getStorefrontMenu(storeFrontId: string): Menu | Promise<Menu>;
 }
 
 export abstract class IMutation {
-    abstract createCustomerOrder(customerOrder: Order): number | Promise<number>;
+    abstract createCustomerOrder(customerOrder: OrderInput): number | Promise<number>;
 }
 
-export class StoreFront {
+export class Storefront {
     id: string;
+    name?: string;
     zipCode: number;
     address: string;
     imageUrl?: string;
@@ -51,9 +58,9 @@ export class Customer {
 
 export class Order {
     id: string;
-    orderingCustomer: number;
+    orderingCustomer: Customer;
     coupons?: Coupon[];
-    storeFront: StoreFront;
+    storefront: Storefront;
 }
 
 export class Coupon {

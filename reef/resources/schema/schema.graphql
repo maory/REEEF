@@ -1,14 +1,14 @@
 type Query {
-    getAllStoreFronts : [StoreFront!]
-    getAllStoreFrontsInMyArea(zipCode: Int) : [StoreFront!]
-    getStoreFrontMenu(storeFrontId: ID!) : Menu
+    getAllStorefronts: [Storefront!]
+    getAllStorefrontsInMyArea(zipCode: Int) : [Storefront!]
+    getStorefrontMenu(storeFrontId: ID!) : Menu
 }
 
 type Mutation {
-    createCustomerOrder(customerOrder: Order!) :Int!
+    createCustomerOrder(customerOrder: OrderInput!) :Int!
 }
 
-type StoreFront {
+type Storefront {
     id: ID!
     name: String
     zipCode: Int!
@@ -35,9 +35,15 @@ type Customer {
 
 type Order {
     id: ID!
+    orderingCustomer: Customer!
+    coupons: [Coupon!]
+    storefront: Storefront!
+}
+
+input OrderInput {
     orderingCustomer: Int!
-    coupons: [Coupon]
-    storeFront: StoreFront!
+    couponIds: [Int!]
+    storeFrontId: Int
 }
 
 type Coupon{
