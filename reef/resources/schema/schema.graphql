@@ -1,0 +1,52 @@
+type Query {
+    getAllStoreFronts : [StoreFront!]
+    getAllStoreFrontsInMyArea(zipCode: Int) : [StoreFront!]
+    getStoreFrontMenu(storeFrontId: ID!) : Menu
+}
+
+type Mutation {
+    createCustomerOrder(customerOrder: Order!) :Int!
+}
+
+type StoreFront {
+    id: ID!
+    name: String
+    zipCode: Int!
+    address: String!
+    imageUrl: String
+    menu: Menu
+    orders: [Order!]
+}
+
+type Menu {
+    id: ID!
+    items: [MenuItem]
+}
+type MenuItem {
+    item: String!
+    priceInCents: Int!
+}
+
+type Customer {
+    id: ID!
+    name: String!
+    address: String!
+}
+
+type Order {
+    id: ID!
+    orderingCustomer: Int!
+    coupons: [Coupon]
+    storeFront: StoreFront!
+}
+
+type Coupon{
+    id: ID! 
+    type: CoupounType!
+    value: Float! 
+}
+
+enum CoupounType {
+    FLAT_SUM, 
+    PERCENTAGE_BASED
+}
