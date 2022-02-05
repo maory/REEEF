@@ -2,7 +2,7 @@ import { DataStore } from 'notarealdb';
 import { Storefront } from 'src/graphql';
 import { Injectable } from '@nestjs/common';
 
-const db = new DataStore('./../../resources/data');
+const db = new DataStore('.../../resources/data');
 // not real db getting data from files.
 @Injectable()
 export class DBService {

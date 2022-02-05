@@ -13,7 +13,7 @@ export enum CoupounType {
 }
 
 export class OrderInput {
-    orderingCustomer: number;
+    customerId: number;
     couponIds?: number[];
     storeFrontId?: number;
 }

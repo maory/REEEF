@@ -31,7 +31,7 @@ export class StoreFrontResolver {
 
     @Resolver('Storefront')
     @ResolveField()
-    orders(@Parent() storefront)  {
+    orders(@Parent() storefront) {
         const { id } = storefront; // must be a cleaner way doing that.
         return this.orderService.getAllStorefrontOrders(id);
     }
